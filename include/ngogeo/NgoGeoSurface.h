@@ -134,7 +134,12 @@ protected :
    {
       if (isHydDiamUserDef())
          hydraulicDiameter = sqrt(fabs(mainModule() )) * hydraulicDiameter.modulated();
-      hydraulicDiameter = 4. * surface() / perimeter();
+	  else 
+	  {
+		  surface.update();
+		  perimeter.update();
+	      hydraulicDiameter = 4. * surface() / perimeter();
+	  }
    };
    /*! @brief virtual method to actually compute suerface */
    void doCalcSurface() { surface = mainModule() * doComputeSurface(); };
