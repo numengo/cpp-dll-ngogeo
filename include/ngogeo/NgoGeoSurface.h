@@ -203,7 +203,7 @@ namespace
 @endcode
 @ingroup GroupNgoObjectManagersAvlComp
 */
-template<class S> class NgoGeoSurfaceRegistrant : public NgoComponentRegistrant<S>
+	template<class S> class NgoGeoSurfaceRegistrant : public NgoSim::NgoComponentRegistrant<S>
 {
 public:
     /*! @brief Base constructor */

@@ -158,7 +158,7 @@ namespace
 @endcode
 @ingroup GroupNgoObjectManagersAvlComp
 */
-template<class S> class NgoGeoVolumeRegistrant : public NgoComponentRegistrant<S>
+	template<class S> class NgoGeoVolumeRegistrant : public NgoSim::NgoComponentRegistrant<S>
 {
 public:
     /*! @brief Base constructor */
