@@ -69,9 +69,8 @@ void NgoGeoGeometry::setModule(double module,const char * pname)
     if (!vars.size())
     {
        std::ostringstream oss;
-       oss << "Impossible to find parameter called : " << pname << " in available parameters." << std::endl;
-       std::string msg = oss.str();
-       throw NgoErrorInvalidArgument(2,msg,"NgoGeoGeometry::setModule","numenGo|Geo");
+       oss << "Impossible to find parameter called : " << pname << " in available parameters.";
+       throw NgoErrorInvalidArgument(2,oss.str(),"NgoGeoGeometry::setModule","numenGo|Geo");
     }
     for (unsigned i=0;i<vars.size();i++)
     {
@@ -88,9 +87,8 @@ void NgoGeoGeometry::setModulatedParameter(const char * pname)
    if (!vars.size()==1)
    {
          std::ostringstream oss;
-         oss << "Impossible to find one parameter called : " << pname << " in available parameters." << std::endl;
-         std::string msg = oss.str();
-         throw NgoErrorInvalidArgument(1,msg,"NgoGeoGeometry::setModulatedParameter","numenGo|Geo");
+         oss << "Impossible to find one parameter called : " << pname << " in available parameters.";
+         throw NgoErrorInvalidArgument(1,oss.str(),"NgoGeoGeometry::setModulatedParameter","numenGo|Geo");
    }
    modulatedParameter_ = dynamic_cast<modulatedParameterReal *>(vars[0]);;
 }
