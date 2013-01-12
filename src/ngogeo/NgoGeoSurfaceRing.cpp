@@ -64,6 +64,12 @@ NgoGeoSurfaceRing::NgoGeoSurfaceRing(double diameter1, double diameter2)
    NgoComponent::create();
    this->diameter1 = diameter1;
    this->diameter2 = diameter2;
+   if (diameter1 < diameter2)
+   {
+       std::ostringstream oss;
+       oss << "Inner diameter is smaller than outer diameter (" << this->diameter1() << " < " << this->diameter2() << ").";
+       throw NgoErrorInvalidArgument(1,oss.str(),"NgoGeoSurfaceRing::NgoGeoSurfaceRing");
+   }
 }
 
 bool NgoGeoSurfaceRing::create(NgoObj::NgoComponent & geometry)
@@ -81,6 +87,12 @@ bool NgoGeoSurfaceRing::create(NgoObj::NgoComponent & geometry)
           NgoQuantity q = vq->getValue();
           q.convert();
           diameter2 = q();
+          if (diameter1 < diameter2)
+          {
+              std::ostringstream oss;
+              oss << "Inner diameter is smaller than outer diameter (" << this->diameter1() << " < " << this->diameter2() << ").";
+              throw NgoErrorInvalidArgument(1,oss.str(),"NgoGeoSurfaceRing::create");
+          }
           return true;
        }
    }
