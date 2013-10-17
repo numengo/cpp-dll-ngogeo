@@ -92,32 +92,17 @@ public :
    virtual bool create(NgoObj::NgoComponent & geometry)=0;
 
    /*! @brief method to compute surface */
-   double computeSurface() {
-       surface.update();
-       return surface();
-    };
+   double computeSurface();
    /*! @brief method to compute perimeter */
-   double computePerimeter() {
-       perimeter.update();
-       return perimeter();
-   };
+   double computePerimeter();
    /*! @brief method to compute hydraulic diameter (4 * surface / perimeter) */
-   double computeHydraulicDiameter()
-   {
-       hydraulicDiameter.update();
-       return hydraulicDiameter();
-   };
+   double computeHydraulicDiameter();
 
    /*! @brief method to set user defined hydraulic diameter */
    /*! Note that it will be added as a geometric parameter and thus can
    be modulated using methods setModule() and setModulatedParameter()
    /*! @param diam hydraulic diameter */
-   void setHydraulicDiameter(double diam)
-   {
-      hydraulicDiameter = diam;
-      if (!isHydDiamUserDef())
-          isHydDiamUserDef = true;
-   };
+   void setHydraulicDiameter(double diam);
 
 protected :
     /*! @brief method to actually overload and define by user */
@@ -130,17 +115,7 @@ protected :
    virtual double doComputePerimeter() = 0;
 
    /*! @brief virtual method to actually compute hydraulic diameter */
-   void doCalcHydraulicDiameter()
-   {
-      if (isHydDiamUserDef())
-         hydraulicDiameter = sqrt(fabs(mainModule() )) * hydraulicDiameter.modulated();
-	  else 
-	  {
-		  surface.update();
-		  perimeter.update();
-	      hydraulicDiameter = 4. * surface() / perimeter();
-	  }
-   };
+   void doCalcHydraulicDiameter();
    /*! @brief virtual method to actually compute suerface */
    void doCalcSurface() { surface = mainModule() * doComputeSurface(); };
    /*! @brief virtual method to actually compute perimeter */

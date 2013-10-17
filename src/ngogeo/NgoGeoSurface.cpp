@@ -99,6 +99,42 @@ NgoGeoSurface::NgoGeoSurface()
     doCreate();
 }
 
+/*! @brief method to compute surface */
+double NgoGeoSurface::computeSurface() {
+    surface.update();
+    return surface();
+ };
+
+double NgoGeoSurface::computePerimeter() {
+    perimeter.update();
+    return perimeter();
+};
+
+double NgoGeoSurface::computeHydraulicDiameter()
+{
+    hydraulicDiameter.update();
+    return hydraulicDiameter();
+};
+
+void NgoGeoSurface::setHydraulicDiameter(double diam)
+{
+   hydraulicDiameter = diam;
+   isHydDiamUserDef = true;
+};
+
+void NgoGeoSurface::doCalcHydraulicDiameter()
+{
+    if (isHydDiamUserDef()) {
+        hydraulicDiameter = sqrt(fabs(mainModule() )) * hydraulicDiameter() * hydraulicDiameter.module();
+    }
+    else 
+    {
+        surface.update();
+        perimeter.update();
+        hydraulicDiameter = 4. * surface() / perimeter();
+    }
+};
+
 void NgoGeoSurface::doCreate()
 {
     setInstanceName("NgoGeoSurface");
