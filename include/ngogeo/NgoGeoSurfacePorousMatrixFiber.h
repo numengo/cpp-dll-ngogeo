@@ -48,7 +48,7 @@ It is a C wrapper to NgoGeo::NgoGeoSurfacePorousMatrixFiber
 @return surface index
 @ingroup GroupNgoGeoWrapperCSurfAvl
 */
-NGO_GEO_EXPORT int NgoGeoSurfRegisterPorousMatrixFiber(int surfind, double dw, double B);
+NGOGEO_EXPORT int NgoGeoSurfRegisterPorousMatrixFiber(int surfind, double dw, double B);
 
 #ifdef __cplusplus
 } // end extern "C"
@@ -76,7 +76,7 @@ namespace NgoGeo {
 @brief class NgoGeoSurface to compute surface and perimeter of a porous media surface for fiber matrixes
 @ingroup GroupNgoGeoSurface
 */
-class NGO_GEO_EXPORT NgoGeoSurfacePorousMatrixFiber : public NgoGeoSurface, public NgoGeoSurfaceModule<NgoGeoSurfacePorousMatrixFiber>
+class NGOGEO_EXPORT NgoGeoSurfacePorousMatrixFiber : public NgoGeoSurface, public NgoGeoSurfaceModule<NgoGeoSurfacePorousMatrixFiber>
 {
 	DECLARE_DYNAMIC_CLASS_NGO( NgoGeoSurfacePorousMatrixFiber )
 

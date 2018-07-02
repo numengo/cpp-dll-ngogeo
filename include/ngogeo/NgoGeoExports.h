@@ -34,13 +34,13 @@
 /*******************************************************************************
    DEFINES / TYPDEFS / ENUMS
 *******************************************************************************/
-#ifdef NGO_GEO_USE_DYN
+#ifdef NGOGEO_USE_DYN
    #ifdef  _MSC_VER
-   	#ifndef NGO_GEO_EXPORT
-   		#ifdef NGO_GEO_MAKE_DLL
-   			#define NGO_GEO_EXPORT __declspec( dllexport )
+   	#ifndef NGOGEO_EXPORT
+   		#ifdef NGOGEO_MAKE_DLL
+   			#define NGOGEO_EXPORT __declspec( dllexport )
    		#else
-   			#define NGO_GEO_EXPORT __declspec( dllimport )
+   			#define NGOGEO_EXPORT __declspec( dllimport )
    		#endif
    	#endif
    	#pragma warning( disable: 4251 )
@@ -48,16 +48,16 @@
    	#pragma warning( disable: 4996 )
    	#pragma warning( disable: 4661 )
    #else
-   	#ifndef NGO_GEO_EXPORT
-   		#ifdef NGO_GEO_MAKE_DLL
-   			#define NGO_GEO_EXPORT
+   	#ifndef NGOGEO_EXPORT
+   		#ifdef NGOGEO_MAKE_DLL
+   			#define NGOGEO_EXPORT
    		#else
-   			#define NGO_GEO_EXPORT
+   			#define NGOGEO_EXPORT
    		#endif
    	#endif
    #endif
 #else
-	#define NGO_GEO_EXPORT
+	#define NGOGEO_EXPORT
 #endif
 
 

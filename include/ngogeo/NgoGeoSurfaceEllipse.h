@@ -48,7 +48,7 @@ It is a C wrapper to NgoGeo::NgoGeoSurfaceEllipse
 @return surface index
 @ingroup GroupNgoGeoWrapperCSurfAvl
 */
-NGO_GEO_EXPORT int NgoGeoSurfRegisterEllipse(double axis1, double axis2);
+NGOGEO_EXPORT int NgoGeoSurfRegisterEllipse(double axis1, double axis2);
 
 #ifdef __cplusplus
 } // end extern "C"
@@ -78,7 +78,7 @@ namespace NgoGeo {
 \image latex ellipse.png
 @ingroup GroupNgoGeoSurface
 */
-class NGO_GEO_EXPORT NgoGeoSurfaceEllipse : public NgoGeoSurface, public NgoGeoSurfaceModule<NgoGeoSurfaceEllipse>
+class NGOGEO_EXPORT NgoGeoSurfaceEllipse : public NgoGeoSurface, public NgoGeoSurfaceModule<NgoGeoSurfaceEllipse>
 {
 	DECLARE_DYNAMIC_CLASS_NGO( NgoGeoSurfaceEllipse )
 

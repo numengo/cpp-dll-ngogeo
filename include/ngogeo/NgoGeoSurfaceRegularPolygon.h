@@ -46,7 +46,7 @@ It is a C wrapper to NgoGeo::NgoGeoSurfaceRegularPolygon
 @return surface index
 @ingroup GroupNgoGeoWrapperCSurfAvl
 */
-NGO_GEO_EXPORT int NgoGeoSurfRegisterRegularPolygon(double side, int nside);
+NGOGEO_EXPORT int NgoGeoSurfRegisterRegularPolygon(double side, int nside);
 
 #ifdef __cplusplus
 } // end extern "C"
@@ -76,7 +76,7 @@ namespace NgoGeo {
 \image latex regular_polygon.png
 @ingroup GroupNgoGeoSurface
 */
-class NGO_GEO_EXPORT NgoGeoSurfaceRegularPolygon : public NgoGeoSurface, public NgoGeoSurfaceModule<NgoGeoSurfaceRegularPolygon>
+class NGOGEO_EXPORT NgoGeoSurfaceRegularPolygon : public NgoGeoSurface, public NgoGeoSurfaceModule<NgoGeoSurfaceRegularPolygon>
 {
 	DECLARE_DYNAMIC_CLASS_NGO( NgoGeoSurfaceRegularPolygon )
 

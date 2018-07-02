@@ -44,7 +44,7 @@ const int vr_NgoGeoSurfaceDisk_diameterModule    = 100;
 @return surface index
 @ingroup GroupNgoGeoWrapperCSurfAvl
 */
-NGO_GEO_EXPORT int NgoGeoSurfRegister(double surf);
+NGOGEO_EXPORT int NgoGeoSurfRegister(double surf);
 
 /*! @brief function to register a disk surface
 It is a C wrapper to NgoGeo::NgoGeoSurfaceDisk
@@ -52,7 +52,7 @@ It is a C wrapper to NgoGeo::NgoGeoSurfaceDisk
 @return surface index
 @ingroup GroupNgoGeoWrapperCSurfAvl
 */
-NGO_GEO_EXPORT int NgoGeoSurfRegisterDisk(double diam);
+NGOGEO_EXPORT int NgoGeoSurfRegisterDisk(double diam);
 
 #ifdef __cplusplus
 } // end extern "C"
@@ -83,7 +83,7 @@ namespace NgoGeo {
 \image latex circle.png
 @ingroup GroupNgoGeoSurface
 */
-class NGO_GEO_EXPORT NgoGeoSurfaceDisk : public NgoGeoSurface, public NgoGeoSurfaceModule<NgoGeoSurfaceDisk>
+class NGOGEO_EXPORT NgoGeoSurfaceDisk : public NgoGeoSurface, public NgoGeoSurfaceModule<NgoGeoSurfaceDisk>
 {
 	DECLARE_DYNAMIC_CLASS_NGO( NgoGeoSurfaceDisk )
 

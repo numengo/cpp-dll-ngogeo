@@ -51,7 +51,7 @@ It is a C wrapper to NgoGeo::NgoGeoVolumeConeFrustum
 @return volume index
 @ingroup GroupNgoGeoWrapperCVolAvl
 */
-NGO_GEO_EXPORT int NgoGeoVolRegisterConeFrustum(double diam1, double height, double diam2);
+NGOGEO_EXPORT int NgoGeoVolRegisterConeFrustum(double diam1, double height, double diam2);
 
 #ifdef __cplusplus
 } // end extern "C"
@@ -82,7 +82,7 @@ namespace NgoGeo {
 \image latex cone_frustum.png
 @ingroup GroupNgoGeoVolume
 */
-class NGO_GEO_EXPORT NgoGeoVolumeConeFrustum : public NgoGeoVolume, public NgoGeoVolumeModule<NgoGeoVolumeConeFrustum>
+class NGOGEO_EXPORT NgoGeoVolumeConeFrustum : public NgoGeoVolume, public NgoGeoVolumeModule<NgoGeoVolumeConeFrustum>
 {
 	DECLARE_DYNAMIC_CLASS_NGO( NgoGeoVolumeConeFrustum )
 

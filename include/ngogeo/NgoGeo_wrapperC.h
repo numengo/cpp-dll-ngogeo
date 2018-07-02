@@ -61,7 +61,7 @@ It is a C wrapper to NgoGeo::NgoGeoSurface::clone()
 @return cloned surface index
 @ingroup GroupNgoGeoWrapperCSurf
 */
-NGO_GEO_EXPORT int NgoGeoSurfDuplicate(int surf);
+NGOGEO_EXPORT int NgoGeoSurfDuplicate(int surf);
 
 /*! @brief function to compute the surface
 It is a C wrapper to NgoGeo::NgoGeoSurface::computeSurface()
@@ -69,7 +69,7 @@ It is a C wrapper to NgoGeo::NgoGeoSurface::computeSurface()
 @return surface value
 @ingroup GroupNgoGeoWrapperCSurf
 */
-NGO_GEO_EXPORT double NgoGeoSurfComputeSurface(int surf);
+NGOGEO_EXPORT double NgoGeoSurfComputeSurface(int surf);
 
 /*! @brief function to compute the perimeter
 It is a C wrapper to NgoGeo::NgoGeoSurface::computePerimeter()
@@ -77,7 +77,7 @@ It is a C wrapper to NgoGeo::NgoGeoSurface::computePerimeter()
 @return perimeter value
 @ingroup GroupNgoGeoWrapperCSurf
 */
-NGO_GEO_EXPORT double NgoGeoSurfComputePerimeter(int surf);
+NGOGEO_EXPORT double NgoGeoSurfComputePerimeter(int surf);
 
 /*! @brief function to compute the hydraulic diameter
 It is a C wrapper to NgoGeo::NgoGeoSurface::computeHydraulicDiameter()
@@ -85,7 +85,7 @@ It is a C wrapper to NgoGeo::NgoGeoSurface::computeHydraulicDiameter()
 @return hydraulic diameter value
 @ingroup GroupNgoGeoWrapperCSurf
 */
-NGO_GEO_EXPORT double NgoGeoSurfComputeHydraulicDiameter(int surf);
+NGOGEO_EXPORT double NgoGeoSurfComputeHydraulicDiameter(int surf);
 
 /*! @brief function to set a user defined hydraulic diameter
 It is a C wrapper to NgoGeo::NgoGeoSurface::setHydraulicDiameter()
@@ -93,7 +93,7 @@ It is a C wrapper to NgoGeo::NgoGeoSurface::setHydraulicDiameter()
 @param diam hydraulic diameter value
 @ingroup GroupNgoGeoWrapperCSurf
 */
-NGO_GEO_EXPORT void NgoGeoSurfSetHydraulicDiameter(int surf, double diam);
+NGOGEO_EXPORT void NgoGeoSurfSetHydraulicDiameter(int surf, double diam);
 
 /*! @brief function to define a modulated parameter of the surface
 It is a C wrapper to NgoGeo::NgoGeoGeometry::setModulatedParameter()
@@ -101,7 +101,7 @@ It is a C wrapper to NgoGeo::NgoGeoGeometry::setModulatedParameter()
 @param param surface parameter identifier
 @ingroup GroupNgoGeoWrapperCSurf
 */
-NGO_GEO_EXPORT void NgoGeoSurfSetModulatedParam(int surf, const char * param);
+NGOGEO_EXPORT void NgoGeoSurfSetModulatedParam(int surf, const char * param);
 
 /*! @brief function to modulate the parameter of the surface defined byNgoGeoSurfSetModulatedParam
 It is a C wrapper to NgoGeo::NgoGeoGeometry::setModule()
@@ -109,7 +109,7 @@ It is a C wrapper to NgoGeo::NgoGeoGeometry::setModule()
 @param module module to set
 @ingroup GroupNgoGeoWrapperCSurf
 */
-NGO_GEO_EXPORT void NgoGeoSurfModulate(int surf, double module);
+NGOGEO_EXPORT void NgoGeoSurfModulate(int surf, double module);
 
  /*! @defgroup GroupNgoGeoWrapperCSurfAvl Available Descriptions
  @ingroup GroupNgoGeoWrapperCSurf
@@ -125,7 +125,7 @@ It is a C wrapper to NgoGeo::NgoGeoVolume::clone()
 @return cloned volume index
 @ingroup GroupNgoGeoWrapperCVol
 */
-NGO_GEO_EXPORT int NgoGeoVolDuplicate(int vol);
+NGOGEO_EXPORT int NgoGeoVolDuplicate(int vol);
 
 /*! @brief function to compute the surface envelop of a volume
 It is a C wrapper to NgoGeo::NgoGeoVolume::computeSurface()
@@ -133,7 +133,7 @@ It is a C wrapper to NgoGeo::NgoGeoVolume::computeSurface()
 @return surface value
 @ingroup GroupNgoGeoWrapperCVol
 */
-NGO_GEO_EXPORT double NgoGeoVolComputeSurface(int vol);
+NGOGEO_EXPORT double NgoGeoVolComputeSurface(int vol);
 
 /*! @brief function to compute the volume
 It is a C wrapper to NgoGeo::NgoGeoVolume::computeVolume()
@@ -141,7 +141,7 @@ It is a C wrapper to NgoGeo::NgoGeoVolume::computeVolume()
 @return surface value
 @ingroup GroupNgoGeoWrapperCVol
 */
-NGO_GEO_EXPORT double NgoGeoVolComputeVolume(int vol);
+NGOGEO_EXPORT double NgoGeoVolComputeVolume(int vol);
 
 /*! @brief function to define a modulated parameter of the volume
 It is a C wrapper to NgoGeo::NgoGeoGeometry::setModulatedParameter()
@@ -149,7 +149,7 @@ It is a C wrapper to NgoGeo::NgoGeoGeometry::setModulatedParameter()
 @param param surface parameter identifier
 @ingroup GroupNgoGeoWrapperCVol
 */
-NGO_GEO_EXPORT void NgoGeoVolSetModulatedParam(int vol, const char * param);
+NGOGEO_EXPORT void NgoGeoVolSetModulatedParam(int vol, const char * param);
 
 /*! @brief function to modulate the parameter of the volume defined byNgoGeoVolSetModulatedParam
 It is a C wrapper to NgoGeo::NgoGeoGeometry::setModule()
@@ -157,7 +157,7 @@ It is a C wrapper to NgoGeo::NgoGeoGeometry::setModule()
 @param module module to set
 @ingroup GroupNgoGeoWrapperCVol
 */
-NGO_GEO_EXPORT void NgoGeoVolModulate(int vol, double module);
+NGOGEO_EXPORT void NgoGeoVolModulate(int vol, double module);
 
  /*! @defgroup GroupNgoGeoWrapperCVolAvl Available Descriptions
  @ingroup GroupNgoGeoWrapperCVol

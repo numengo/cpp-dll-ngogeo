@@ -48,7 +48,7 @@ It is a C wrapper to NgoGeo::NgoGeoSurfaceRectangle
 @return surface index
 @ingroup GroupNgoGeoWrapperCSurfAvl
 */
-NGO_GEO_EXPORT int NgoGeoSurfRegisterRectangle(double side1, double side2);
+NGOGEO_EXPORT int NgoGeoSurfRegisterRectangle(double side1, double side2);
 
 #ifdef __cplusplus
 } // end extern "C"
@@ -79,7 +79,7 @@ namespace NgoGeo {
 \image latex rectangle.png
 @ingroup GroupNgoGeoSurface
 */
-class NGO_GEO_EXPORT NgoGeoSurfaceRectangle : public NgoGeoSurface, public NgoGeoSurfaceModule<NgoGeoSurfaceRectangle>
+class NGOGEO_EXPORT NgoGeoSurfaceRectangle : public NgoGeoSurface, public NgoGeoSurfaceModule<NgoGeoSurfaceRectangle>
 {
 	DECLARE_DYNAMIC_CLASS_NGO( NgoGeoSurfaceRectangle )
 

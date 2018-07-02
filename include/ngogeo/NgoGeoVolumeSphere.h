@@ -44,7 +44,7 @@ const int vr_NgoGeoVolumeSphere_diameterModule    = 100;
 @return volume index
 @ingroup GroupNgoGeoWrapperCVolAvl
 */
-NGO_GEO_EXPORT int NgoGeoVolRegister(double vol);
+NGOGEO_EXPORT int NgoGeoVolRegister(double vol);
 
 /*! @brief function to register a volume of a sphere
 It is a C wrapper to NgoGeo::NgoGeoVolumeSphere
@@ -52,7 +52,7 @@ It is a C wrapper to NgoGeo::NgoGeoVolumeSphere
 @return volume index
 @ingroup GroupNgoGeoWrapperCVolAvl
 */
-NGO_GEO_EXPORT int NgoGeoVolRegisterSphere(double diam);
+NGOGEO_EXPORT int NgoGeoVolRegisterSphere(double diam);
 
 #ifdef __cplusplus
 } // end extern "C"
@@ -82,7 +82,7 @@ namespace NgoGeo {
 \image latex sphere.png
 @ingroup GroupNgoGeoVolume
 */
-class NGO_GEO_EXPORT NgoGeoVolumeSphere : public NgoGeoVolume, public NgoGeoVolumeModule<NgoGeoVolumeSphere>
+class NGOGEO_EXPORT NgoGeoVolumeSphere : public NgoGeoVolume, public NgoGeoVolumeModule<NgoGeoVolumeSphere>
 {
 	DECLARE_DYNAMIC_CLASS_NGO( NgoGeoVolumeSphere )
 

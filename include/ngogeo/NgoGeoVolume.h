@@ -67,7 +67,7 @@ namespace NgoGeo {
 @brief Abstract class for a NgoGeoVolume
 @ingroup GroupNgoGeoVolume
 */
-class NGO_GEO_EXPORT NgoGeoVolume : public NgoGeoGeometry
+class NGOGEO_EXPORT NgoGeoVolume : public NgoGeoGeometry
 {
 	DECLARE_ABSTRACT_CLASS_NGO( NgoGeoVolume )
 
@@ -117,11 +117,11 @@ public :
 };
 
 /*! @brief method to retrieve surfaces vector and use indexes */
-NGO_GEO_EXPORT std::vector<NgoGeo::NgoGeoVolume *> & getVolumes();
+NGOGEO_EXPORT std::vector<NgoGeo::NgoGeoVolume *> & getVolumes();
 /*! @brief method to retrieve volume with its index */
-NGO_GEO_EXPORT NgoGeo::NgoGeoVolume * getVolume(const variableInteger & index);
+NGOGEO_EXPORT NgoGeo::NgoGeoVolume * getVolume(const variableInteger & index);
 /*! @brief method to retrieve volume with its index */
-NGO_GEO_EXPORT NgoGeo::NgoGeoVolume * getVolume(const int index);
+NGOGEO_EXPORT NgoGeo::NgoGeoVolume * getVolume(const int index);
 
 } // namespace NgoGeo
 
@@ -135,8 +135,8 @@ typedef NgoGeo::NgoGeoVolume * (CreateVolume)(NgoObj::NgoComponent &);
 @brief this is a class to manage NgoGeoVolume objects
 @ingroup GroupNgoObjectManagersAvl */
 //typedef NgoObjectManager<NgoGeo::NgoGeoVolume,CreateVolume> NgoGeoVolumeManager;
-//class NGO_GEO_EXPORT NgoGeoVolumeManager : public NgoObjectManager<NgoGeo::NgoGeoVolume,CreateVolume> {};
-class NGO_GEO_EXPORT NgoGeoVolumeManager : public NgoObjectManagerBase<NgoGeo::NgoGeoVolume,CreateVolume> , public NgoSingleton< NgoGeoVolumeManager >
+//class NGOGEO_EXPORT NgoGeoVolumeManager : public NgoObjectManager<NgoGeo::NgoGeoVolume,CreateVolume> {};
+class NGOGEO_EXPORT NgoGeoVolumeManager : public NgoObjectManagerBase<NgoGeo::NgoGeoVolume,CreateVolume> , public NgoSingleton< NgoGeoVolumeManager >
 {
    friend class NgoSingleton< NgoGeoVolumeManager >;
 public :

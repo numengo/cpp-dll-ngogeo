@@ -48,7 +48,7 @@ It is a C wrapper to NgoGeo::NgoGeoSurfaceRing
 @return surface index
 @ingroup GroupNgoGeoWrapperCSurfAvl
 */
-NGO_GEO_EXPORT int NgoGeoSurfRegisterRing(double diam1, double diam2);
+NGOGEO_EXPORT int NgoGeoSurfRegisterRing(double diam1, double diam2);
 
 #ifdef __cplusplus
 } // end extern "C"
@@ -80,7 +80,7 @@ namespace NgoGeo {
 \image latex right_cylinder.png
 @ingroup GroupNgoGeoSurface
 */
-class NGO_GEO_EXPORT NgoGeoSurfaceRing : public NgoGeoSurface, public NgoGeoSurfaceModule<NgoGeoSurfaceRing>
+class NGOGEO_EXPORT NgoGeoSurfaceRing : public NgoGeoSurface, public NgoGeoSurfaceModule<NgoGeoSurfaceRing>
 {
 	DECLARE_DYNAMIC_CLASS_NGO( NgoGeoSurfaceRing )
 

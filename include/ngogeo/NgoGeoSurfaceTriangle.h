@@ -51,7 +51,7 @@ It is a C wrapper to NgoGeo::NgoGeoSurfaceTriangle
 @return surface index
 @ingroup GroupNgoGeoWrapperCSurfAvl
 */
-NGO_GEO_EXPORT int NgoGeoSurfRegisterTriangle(double side1, double side2, double side3);
+NGOGEO_EXPORT int NgoGeoSurfRegisterTriangle(double side1, double side2, double side3);
 
 #ifdef __cplusplus
 } // end extern "C"
@@ -82,7 +82,7 @@ namespace NgoGeo {
 \image latex triangle.png
 @ingroup GroupNgoGeoSurface
 */
-class NGO_GEO_EXPORT NgoGeoSurfaceTriangle : public NgoGeoSurface, public NgoGeoSurfaceModule<NgoGeoSurfaceTriangle>
+class NGOGEO_EXPORT NgoGeoSurfaceTriangle : public NgoGeoSurface, public NgoGeoSurfaceModule<NgoGeoSurfaceTriangle>
 {
 	DECLARE_DYNAMIC_CLASS_NGO( NgoGeoSurfaceTriangle )
 

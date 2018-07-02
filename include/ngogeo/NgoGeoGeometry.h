@@ -86,7 +86,7 @@ static double d_pi = 3.141592653589793;
 
 class modulatedParameterReal : public parameterReal
 {
-    DECLARE_DYNAMIC_TEMPLATE_CLASS_NGO(NGO_GEO_EXPORT,modulatedParameterReal)
+    DECLARE_DYNAMIC_TEMPLATE_CLASS_NGO(NGOGEO_EXPORT,modulatedParameterReal)
 
 public:
     /*! @brief base constructor */
@@ -144,7 +144,7 @@ protected:
 @brief Abstract class for a NgoGeoGeometry
 @ingroup GroupNgoGeoGeometry
 */
-class NGO_GEO_EXPORT NgoGeoGeometry : public NgoSim::NgoComponent
+class NGOGEO_EXPORT NgoGeoGeometry : public NgoSim::NgoComponent
 {
 	DECLARE_ABSTRACT_CLASS_NGO( NgoGeoGeometry )
 

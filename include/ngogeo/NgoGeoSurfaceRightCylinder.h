@@ -46,7 +46,7 @@ It is a C wrapper to NgoGeo::NgoGeoSurfaceRightCylinder
 @return surface index
 @ingroup GroupNgoGeoWrapperCSurfAvl
 */
-NGO_GEO_EXPORT int NgoGeoSurfRegisterRightCylinder(int surf, double height);
+NGOGEO_EXPORT int NgoGeoSurfRegisterRightCylinder(int surf, double height);
 
 #ifdef __cplusplus
 } // end extern "C"
@@ -77,7 +77,7 @@ namespace NgoGeo {
 @sa NgoGeoVolumeRightCylinder
 @ingroup GroupNgoGeoSurface
 */
-class NGO_GEO_EXPORT NgoGeoSurfaceRightCylinder : public NgoGeoSurface, public NgoGeoSurfaceModule<NgoGeoSurfaceRightCylinder>
+class NGOGEO_EXPORT NgoGeoSurfaceRightCylinder : public NgoGeoSurface, public NgoGeoSurfaceModule<NgoGeoSurfaceRightCylinder>
 {
 	DECLARE_DYNAMIC_CLASS_NGO( NgoGeoSurfaceRightCylinder )
 

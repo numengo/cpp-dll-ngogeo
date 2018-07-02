@@ -72,7 +72,7 @@ namespace NgoGeo {
 @brief Abstract class for a NgoGeoSurface
 @ingroup GroupNgoGeoSurface
 */
-class NGO_GEO_EXPORT NgoGeoSurface : public NgoGeoGeometry
+class NGOGEO_EXPORT NgoGeoSurface : public NgoGeoGeometry
 {
 	DECLARE_ABSTRACT_CLASS_NGO( NgoGeoSurface )
 
@@ -136,11 +136,11 @@ public :
 };
 
 /*! @brief method to retrieve surfaces vector and use indexes */
-NGO_GEO_EXPORT std::vector<NgoGeo::NgoGeoSurface *> & getSurfaces();
+NGOGEO_EXPORT std::vector<NgoGeo::NgoGeoSurface *> & getSurfaces();
 /*! @brief method to retrieve surface with its index */
-NGO_GEO_EXPORT NgoGeo::NgoGeoSurface * getSurface(const variableInteger & index);
+NGOGEO_EXPORT NgoGeo::NgoGeoSurface * getSurface(const variableInteger & index);
 /*! @brief method to retrieve surface with its index */
-NGO_GEO_EXPORT NgoGeo::NgoGeoSurface * getSurface(const int index);
+NGOGEO_EXPORT NgoGeo::NgoGeoSurface * getSurface(const int index);
 
 } // namespace NgoGeo
 
@@ -154,10 +154,10 @@ typedef NgoGeo::NgoGeoSurface * (CreateSurface)(NgoObj::NgoComponent &);
 @brief this is a class to manage NgoGeoSurface objects
 @ingroup GroupNgoObjectManagersAvl */
 //typedef NgoObjectManager<NgoGeo::NgoGeoSurface,CreateSurface> NgoGeoSurfaceManager;
-//class NGO_GEO_EXPORT NgoGeoSurfaceManager : public NgoObjectManager<NgoGeo::NgoGeoSurface,CreateSurface> {};
+//class NGOGEO_EXPORT NgoGeoSurfaceManager : public NgoObjectManager<NgoGeo::NgoGeoSurface,CreateSurface> {};
 
-//class NGO_GEO_EXPORT NgoGeoSurfaceManager : public NgoObjectManagerBase<NgoGeo::NgoGeoSurface,CreateSurface> , public NgoSingleton< NgoGeoSurfaceManager >
-class NGO_GEO_EXPORT NgoGeoSurfaceManager : public NgoObjectManagerBase<NgoGeo::NgoGeoSurface,CreateSurface> , public NgoSingleton< NgoGeoSurfaceManager >
+//class NGOGEO_EXPORT NgoGeoSurfaceManager : public NgoObjectManagerBase<NgoGeo::NgoGeoSurface,CreateSurface> , public NgoSingleton< NgoGeoSurfaceManager >
+class NGOGEO_EXPORT NgoGeoSurfaceManager : public NgoObjectManagerBase<NgoGeo::NgoGeoSurface,CreateSurface> , public NgoSingleton< NgoGeoSurfaceManager >
 {
    friend class NgoSingleton< NgoGeoSurfaceManager >;
 public :

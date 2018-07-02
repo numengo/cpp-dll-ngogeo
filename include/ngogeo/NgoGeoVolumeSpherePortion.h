@@ -48,7 +48,7 @@ It is a C wrapper to NgoGeo::NgoGeoVolumeSpherePortion
 @return volume index
 @ingroup GroupNgoGeoWrapperCVolAvl
 */
-NGO_GEO_EXPORT int NgoGeoVolRegisterSpherePortion(double diam, double height);
+NGOGEO_EXPORT int NgoGeoVolRegisterSpherePortion(double diam, double height);
 
 
 #ifdef __cplusplus
@@ -79,7 +79,7 @@ namespace NgoGeo {
 \image latex sphere_portion.png
 @ingroup GroupNgoGeoVolume
 */
-class NGO_GEO_EXPORT NgoGeoVolumeSpherePortion : public NgoGeoVolume, public NgoGeoVolumeModule<NgoGeoVolumeSpherePortion>
+class NGOGEO_EXPORT NgoGeoVolumeSpherePortion : public NgoGeoVolume, public NgoGeoVolumeModule<NgoGeoVolumeSpherePortion>
 {
 	DECLARE_DYNAMIC_CLASS_NGO( NgoGeoVolumeSpherePortion )
 
