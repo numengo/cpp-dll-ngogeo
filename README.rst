@@ -1,4 +1,4 @@
-NgoGeo (v1.1.0) - geometry related objects
+NgoGeo (vv1.1.1.) - geometry related objects
 ======================================================================
 
 
